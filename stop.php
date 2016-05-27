@@ -1,13 +1,9 @@
 <?php
 function stop(){ 
 return array(
-    ',',
-    '.',
-    '!',
-    '?',
-    '\n',
+    '',
     ' ',
-    '--',
+    ' ',
     'a',
     'about',
     'above',

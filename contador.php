@@ -9,10 +9,11 @@ if ($handle) {
         echo "Erro: falha inexperada de fgets()\n";
     }
     include 'stop.php';
-    $txt=str_replace("\n", " ", $txt);
-    $palavras=explode(" ", $txt);
-   
+    $char = array( ',', '.', '!','?',"\n",'--',';','"','*', ' ', "\t", ":");
+    $txt=str_replace($char, ";", strtolower($txt));
+    $palavras=explode(";", $txt);
 
+    $palavras = array_diff($palavras, stop());
 
     $res= array_count_values($palavras);
     print_r($res);
