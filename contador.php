@@ -1,5 +1,5 @@
 <?php
-$handle = fopen("sherlock.txt", "r");
+$handle = fopen("sherlock.txt", "r");//explain commit
 if ($handle) {
 	$txt="";
     while (($buffer = fgets($handle, 4096)) !== false) {
