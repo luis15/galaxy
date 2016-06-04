@@ -10,17 +10,22 @@ if ($handle) {
     }
     include 'stop.php';
     $txt=strtolower($txt);
-    $char = array( ',', '.', '!','?',"\n",'--',';','"','*', ' ', "\t", ":",'(',')','[',']','%','1','2','3','4','5','6','7','8','9','0');
+    $char = array( ',', '.', '!','?',"\n",'-',';','"','*', ' ', "\t", ":",'(',')','[',']','%','1','2','3','4','5','6','7','8','9','0');
     $txt=str_replace($char, ';', $txt);
     $palavras=explode(";", $txt);
 
     $palavras = array_diff($palavras, stop());
 
     $res= array_count_values($palavras);
+    $unico = array_unique($palavras);
 
-    $tam = count($res);
+    $tam = count($unico);
     for($i=0; $i<$tam; $i++){
-       echo $res[$i];
+        for($j=0; $j<$tam; $j++){
+            if($unico[$i]&&$unico[$j]){
+               echo $unico[$i]."Λ".$unico[$j]."=".levenshtein($unico[$i], $unico[$j])."\n";
+            }
+        }
     }
     
     //print_r levenshtein(res[0], res[1]);
