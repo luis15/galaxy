@@ -22,8 +22,8 @@ if ($handle) {
     $tam = count($unico);
     for($i=0; $i<$tam; $i++){
         for($j=0; $j<$tam; $j++){
-            if($unico[$i]&&$unico[$j]){
-               echo $unico[$i]."Λ".$unico[$j]."=".levenshtein($unico[$i], $unico[$j])."\n";
+            if(isset($unico[$i])&&isset($unico[$j])){
+               echo $unico[$i]."Λ".$unico[$j]."=".levenshtein($unico[$i], $unico[$j])."<br/>";
             }
         }
     }
