@@ -1,34 +1,53 @@
 <?php
-$handle = fopen("dilma.txt", "r");//explain commit
-if ($handle) {
-	$txt="";
-    while (($buffer = fgets($handle, 4096)) !== false) {
-        $txt.= $buffer;
-    }
-    if (!feof($handle)) {
-        echo "Erro: falha inexperada de fgets()\n";
-    }
-    include 'stop.php';
-    $txt=strtolower($txt);
-    $char = array( ',', '.', '!','?',"\n",'-',';','"','*', ' ', "\t", ":",'(',')','[',']','%','1','2','3','4','5','6','7','8','9','0');
-    $txt=str_replace($char, ';', $txt);
-    $palavras=explode(";", $txt);
+function contador($localizacao){
+    $handle = fopen($localizacao, "r");//explain commit
+    if ($handle) {
+    	$txt="";
+        while (($buffer = fgets($handle, 4096)) !== false) {
+            $txt.= $buffer;
+        }
+        if (!feof($handle)) {
+            echo "Erro: falha inexperada de fgets()\n";
+        }
+        include_once 'stop.php';
+        $txt=strtolower($txt);
+        $char = array( ',', '.', '!','?',"\n",'-',';','"','*', ' ', "\t", ":",'(',')','[',']','%','1','2','3','4','5','6','7','8','9','0');
+        $txt=str_replace($char, ';', $txt);
+        $palavras=explode(";", $txt);
 
-    $palavras = array_diff($palavras, stop());
+        $palavras = array_diff($palavras, stop());
 
-    $res= array_count_values($palavras);
-    $unico = array_unique($palavras);
+        $res= array_count_values($palavras);
+        $unico = array_unique($palavras);
 
-    $tam = count($unico);
-    for($i=0; $i<$tam; $i++){
-        for($j=0; $j<$tam; $j++){
-            if(isset($unico[$i])&&isset($unico[$j])){
-               echo $unico[$i]."Λ".$unico[$j]."=".levenshtein($unico[$i], $unico[$j])."<br/>";
+        $tam = count($unico);
+        /*for($i=0; $i<$tam; $i++){
+            for($j=0; $j<$tam; $j++){
+                if(isset($unico[$i])&&isset($unico[$j])){
+                   //echo $unico[$i]."Λ".$unico[$j]."=".levenshtein($unico[$i], $unico[$j])."<br/>";
+                }
+            }
+        }*/
+
+        $matrix=implode("\n",$res);
+        //print_r(count($palavras));
+        $tam = count($unico);
+        for($i=0; $i<$tam; $i++){
+            if($matrix[$i]!=0){
+                (float)$val[$i] = (float)$matrix[$i]*100/$tam;
             }
         }
+        for($i=0, $j=0; $i<$tam; $i++){
+            if(isset($unico[$i])&&isset($val[$i])){
+                $table[$j][0]=$unico[$i];
+                $table[$j][1]=$val[$i];
+                $j++;
+            }
+        }
+        
+        fclose($handle);
+        return $table;
+
     }
-    
-    //print_r levenshtein(res[0], res[1]);
-    fclose($handle);
 }
 ?>

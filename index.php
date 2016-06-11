@@ -15,7 +15,9 @@
 
 </style>
 <body bgcolor="#191970">
-<?php include"contador.php";?>
+<?php include"comparador.php";
+comparador();
+?>
 <script src="d3.js"></script>
 <script>
 
