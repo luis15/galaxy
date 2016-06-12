@@ -1,0 +1,50 @@
+Disciplina: TT004 – Visualização de Informação
+1º semestre de 2016
+Prof. Dr. Celmar Guimarães da Silva
+Trabalho 1
+Objetivo: Usar ferramentas de visualização para analisar dados multivariados.
+Objeto do estudo: Conjunto de dados “Tabela de composição nutricional dos alimentos consumidos no
+Brasil (Estruturada para Banco de Dados)”. Disponível em:
+http://www.ibge.gov.br/home/estatistica/populacao/condicaodevida/pof/2008_2009_composicao_nutricional/
+default_zip.shtm
+Tarefas:
+– Elaborar perguntas que pessoas supostamente interessadas no conjunto de dados do IBGE tivessem
+interesse em responder.
+– Escolher e usar ao menos 4 gráficos interativos para representar o conjunto de dados, explicitando
+que informações sobre os dados esses gráficos trazem.
+– Um deles deve necessariamente ser um grafo orientado a força ou uma projeção
+multidimensional.
+– Todos os gráficos devem envolver mais de 2 variáveis.
+– Quaisquer ferramentas de visualização que julgarem relevantes. Ex.: Tableau, Spotfire, Orange,
+IBM Watson Analytics. Podem também fazer software próprio, usando bibliotecas como D3 ou
+Google Chart Tools.
+– Elaborar apresentação sobre o estudo feito.
+– Elaborar artigo sobre o estudo feito.
+Sobre a apresentação:
+– Duração: 10 a 15 min.
+– Formato: livre
+– Recomendações:
+– Trazer slides e também a ferramenta com os dados carregados
+– Trazer computador para a apresentação
+– Projetor de slides estará à disposição
+– Haverá breve discussão dos resultados após a apresentação.
+Sobre o artigo:
+– Tamanho: 6 a 8 páginas
+– Formato: Formato da SBC para artigos. Disponível em: http://www.sbc.org.br/documentos-dasbc/summary/169-templates-para-artigos-e-capitulos-de-livros/878-modelosparapublicaodeartigos
+– Conteúdo:
+– Resumo
+– Introdução
+– Referencial teórico das técnicas de visualização utilizadas no artigo (ou seja, breve explicação
+sobre as técnicas usadas, devidamente referenciadas)
+– Materiais e métodos:
+– Deve prover respostas às seguintes perguntas:
+– Quais perguntas os usuários supostamente teriam sobre o conjunto de dados?
+– Quais ferramentas foram escolhidas para responder a essas perguntas?
+– Quais técnicas foram escolhidas para responder a essas perguntas?
+– Quais mapeamentos visuais foram feitos para responder a essas perguntas?
+– Resultados (análise feita, ou seja, o que cada gráfico permite inferir de informação)
+– Obs.: As informações devem ser explicitadas textualmente, com figuras comprovando e
+apresentando as informações conseguidas na análise.
+– Para quais das perguntas dos usuários se obteve respostas?
+– Considerações finais
+Entrega (via TelEduc) e apresentação: 03/05/16
