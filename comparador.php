@@ -10,12 +10,13 @@ function comparador(){
 		for($y=0; $y<$tam; $y++){
 			if($x!=$y){
 				$dis = distance($table[$x][1], $table[$y][1]);
-				if($dis<50){
-					if(($x==($tam-1))&&($y==($tam-2)))
+					if(($x==($tam-1))&&($y==($tam-2))){
 						$return.="\t\t{\"source\":".$x.",\"target\":".$y.",\"value\":".$dis."}\n";
-					else
-						$return.="\t\t{\"source\":".$x.",\"target\":".$y.",\"value\":".$dis."},\n";
-				}
+					}
+					else{
+						if($dis<=60) 
+							$return.="\t\t{\"source\":".$x.",\"target\":".$y.",\"value\":".$dis."},\n";
+					}
 			}
 		}
 	}

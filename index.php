@@ -14,7 +14,7 @@
 }
 
 </style>
-<body bgcolor="#191970">
+<body bgcolor="black">
 <?php 
 include "roda.php";
 geraJson();
@@ -22,12 +22,12 @@ geraJson();
 <script src="d3.js"></script>
 <script>
 
-var width = 1240,
-    height = 768;
+var width = 1280,
+    height = 680;
 
 var force = d3.layout.force()
-    .charge(-200)
-    .linkDistance(40)
+    .charge(-300)
+    .linkDistance(120)
     .size([width, height]);
 
 var svg = d3.select("body").append("svg")
